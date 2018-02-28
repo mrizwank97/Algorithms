@@ -50,15 +50,20 @@ def safe_div(x,y):
 """
 
 
-file = open("test7.txt",'r')
+file = open("Test Files\\test7.txt",'r')
 doc1 = file.read()
-file = open("test7.txt",'r')
+file = open("Test Files\\test7.txt",'r')
 doc2 = file.read()
 #removing punctuations from the files and converting to lowercase
 doc1 = doc1.lower()
-doc1 = r.sub(r'[^\w\s]','',doc1)
+doc1 = r.sub(r'[^\w\s]','',doc1) #removing non-alphabets
+doc1 = r.sub("\n\s*\n*", ' ', doc1) #removing multiple lines
+doc1 = r.sub(' +',' ', doc1) #removing multiple spaces
 doc2 = doc2.lower()
 doc2 = r.sub(r'[^\w\s]','',doc2)
+doc2 = r.sub("\n\s*\n*", ' ', doc2)
+doc2 = r.sub(' +',' ', doc2)
+
 #starting timer
 start = t.time()
 #caculating the frequency of each documnet for both files
