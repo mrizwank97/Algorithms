@@ -50,9 +50,9 @@ def safe_div(x,y):
 """
 
 
-file = open("Test Files\\test7.txt",'r')
+file = open("Test Files\\test5.txt",'r')
 doc1 = file.read()
-file = open("Test Files\\test7.txt",'r')
+file = open("Test Files\\test5.txt",'r')
 doc2 = file.read()
 #removing punctuations from the files and converting to lowercase
 doc1 = doc1.lower()
